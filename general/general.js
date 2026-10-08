@@ -103,9 +103,35 @@
 // })
 
 
+// const parent = document.querySelector("#parent")
+
+// parent.addEventListener("click", (e) => {
+//     console.log("kaun dabaya :", e.target.textContent)
+//     e.target.style.color = "red"
+// })
 
 
+// const list = document.querySelector("#list")
+
+// list.addEventListener("click", (e) => {
+//     console.log("kaun dababya" , e.target.textContent)
+//     console.log("jo badalta nhi hai ", e.currentTarget)
+//     e.target.style.color = "red"
+// })
 
 
+const sunn = document.querySelector("#list")
+
+// items.forEach((li) => {
+//   li.addEventListener("click", () => {
+//     console.log(li.textContent);
+//   });
+// });
+
+sunn.addEventListener("click", (e) => {
+    if(e.target.tagName === "LI"){
+        console.log(e.target.textContent)
+    }
+})
 
 
