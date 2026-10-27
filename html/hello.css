@@ -1,0 +1,17 @@
+.box{
+    position: relative;
+    animation: move 2s infinite alternate;
+    background: #000;
+    width: 100px;
+    height: 100px;
+
+}
+
+@keyframes move {
+    from{
+        left: 0;
+    }
+    to{
+        left: 200px;
+    }
+}
