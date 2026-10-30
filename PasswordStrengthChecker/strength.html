@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./strength.css">
+</head>
+<body>
+
+    <h1 class="head">
+        Password Strength Checker
+    </h1>
+    <br><br>
+    <input type="password" class="password" placeholder="Enter Password">
+    <div class="strength-bar">
+        <div class="strength-fill"></div>
+    </div>
+    <p class="check"></p>
+
+    <p class="length-check"><input type="checkbox" disabled/>At least 8 character</p>
+    <p class="upper-case"><input type="checkbox" /> One uppercase letter (A-Z)</p>
+    <p class="lower-case"><input type="checkbox" /> One lowercase letter(a-z)</p>
+    <p class="number-case"><input type="checkbox" /> One number (0-9)</p>
+    <p class="special-case"><input type="checkbox" /> One special character(!@#$%^&*)</p>
+    
+    <script src="./strength.js"></script>
+</body>
+</html>
