@@ -7,6 +7,11 @@ const lowercase = document.querySelector(".lower-case")
 const numbercase = document.querySelector(".number-case")
 const specialcase = document.querySelector(".special-case")
 const lengthCheckbox = lengthcheck.querySelector("input")
+const uppercaseCheckbox = uppercase.querySelector("input")
+const lowercaseCheckbox = lowercase.querySelector("input")
+const specialcaseCheckbox = specialcase.querySelector("input")
+const numbercaseCheckbox = numbercase.querySelector("input")
+
 
 password.addEventListener("input", () => {
 
@@ -42,8 +47,40 @@ password.addEventListener("input", () => {
         lengthcheck.style.color = "green"
         lengthCheckbox.checked = true
     } else {
-        lengthCheckbox.checked = false
         lengthcheck.style.color = "gray"
+        lengthCheckbox.checked = false
+    }
+
+    if(hasUppercase){
+        uppercase.style.color = "green"
+        uppercaseCheckbox.checked = true
+    }else {
+        uppercase.style.color ="gray"
+        uppercaseCheckbox.checked = false
+    }
+
+    if(hasLowwercase){
+        lowercase.style.color = "green"
+        lowercaseCheckbox.checked = true
+    }else {
+        lowercase.style.color ="gray"
+        lowercaseCheckbox.checked = false
+    }
+
+    if(hasSpecialCharacter){
+        specialcase.style.color = "green"
+        specialcaseCheckbox.checked  = true
+    }else {
+        specialcase.style.color ="gray"
+        specialcaseCheckbox.checked = false
+    }
+
+    if(hasNumber){
+        numbercase.style.color = "green"
+        numbercaseCheckbox.checked = true
+    }else {
+        numbercase.style.color ="gray"
+        numbercaseCheckbox.checked = false
     }
 
     if (password.value === "") {
