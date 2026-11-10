@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+}
+
+/* Main Heading */
+h2 {
+    font-size: 34px;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Search Container */
+.city-search {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.input:focus {
+    background: #f5f7ff;
+}
+
+.btn {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #4169e1;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #254fc7;
+    transform: translateY(-2px);
+}
+
+/* Weather Information */
+.weather-information {
+    width: 100%;
+    max-width: 450px;
+    min-height: 50px;
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Weather Card */
+.weather-card {
+    width: 100%;
+    padding: 30px 25px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #e9f0ff);
+    color: #1e293b;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+/* City Name */
+.weather-card .city-name {
+    font-size: 27px;
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 25px;
+}
+
+/* Temperature */
+.weather-card .temparature {
+    font-size: 48px;
+    font-weight: 700;
+    color: #4169e1;
+    margin-bottom: 25px;
+}
+
+/* Weather Details */
+.weather-card p {
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    .city-search {
+        padding: 9px;
+        gap: 6px;
+    }
+
+    .input {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+
+    .btn {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .weather-card {
+        padding: 25px 18px;
+    }
+
+    .weather-card .city-name {
+        font-size: 23px;
+    }
+
+    .weather-card .temparature {
+        font-size: 40px;
+    }
+
+    .weather-card p {
+        font-size: 14px;
+    }
+}
