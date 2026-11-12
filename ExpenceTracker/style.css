@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Main Heading */
+
+.container > h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Total Expense */
+
+.total-expense {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
+}
+
+.total-expense h2:first-child {
+    font-size: 17px;
+    font-weight: 500;
+    color: #e0e7ff;
+    margin-bottom: 12px;
+}
+
+.total-expense .total-amount {
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Expense Form */
+
+.expense-form {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #334155;
+}
+
+.expense-form input,
+.expense-form select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    outline: none;
+    background: #0f172a;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.expense-form input::placeholder {
+    color: #94a3b8;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+/* Add Button */
+
+.add-expense-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-expense-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Expense History */
+
+.expense-list-section {
+    margin-top: 35px;
+}
+
+.expense-list-section > h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .container > h1 {
+        font-size: 29px;
+    }
+
+    .total-expense {
+        padding: 25px;
+    }
+
+    .total-expense .total-amount {
+        font-size: 32px;
+    }
+
+    .expense-form {
+        padding: 18px;
+    }
+}
