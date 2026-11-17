@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanceFlow</title>
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside>
+        <img
+          src="./assests/FinanceFlow Upward Growth Logo.png"
+          alt="#logo"
+          class="image"
+        />
+
+        <nav>
+          <a href="./index.html">
+            <i class="fa-solid fa-house"></i> Dashboard</a
+          >
+
+          <a href="./Pages/analytics.html">
+            <i class="fa-solid fa-chart-column"></i> Analytics</a
+          >
+          <a href="./Pages/budgets.html"
+            ><i class="fa-solid fa-bullseye"></i> Budgets</a
+          >
+          <a href="./Pages/transaction.html"
+            ><i class="fa-solid fa-arrow-right-arrow-left"></i> Transactions</a
+          >
+          <a href="./Pages/settings.html"
+            ><i class="fa-solid fa-gear"></i> Settings</a
+          >
+          <a href="./Pages/ai-assistant.html"
+            ><i class="fa-solid fa-robot"></i> AI Assistant</a
+          >
+        </nav>
+
+        <div class="profile">
+          <img src="" alt="" class="profile-image" />
+          <div class="profile-name">
+            <h5>Shamshad Alam</h5>
+            <p>Personal Account</p>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <div class="top-header">
+          <div class="welcome-back">
+            <h2>Welcome back, Shamshad!</h2>
+            <p>Track your income, expenses and manage your budget easily.</p>
+          </div>
+
+          <div class="date-light">
+            <div class="date">
+              <i class="fa-regular fa-calendar"></i> SAT, NOV 30, 2026
+            </div>
+            <div class="theme">
+              <i class="fa-solid fa-sun"></i> <i class="fa-solid fa-moon"></i>
+            </div>
+            <i class="fa-solid fa-bell"></i>
+            <div class="add-transaction">
+              <button>+ Add Transaction</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="middle-header">
+          <div class="first">
+            <div>
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div>
+              <p class="ba">Total Balance</p>
+              <h3>$50,000</h3>
+              <p>+12.5%</p>
+            </div>
+          </div>
+
+          <div class="second">
+            <div>
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+            <div>
+              <p class="ba">Total Income</p>
+              <h3>$50,000</h3>
+              <p>+12.5%</p>
+            </div>
+          </div>
+
+          <div class="fourth">
+            <div>
+              <i class="fa-solid fa-arrow-up-long"></i>
+            </div>
+            <div>
+              <p class="ba">Total Expense</p>
+              <h3>$50,000</h3>
+              <p>+12.5%</p>
+            </div>
+          </div>
+
+          <div class="third">
+            <div>
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <div>
+              <p class="ba">Monthly Savings</p>
+              <h3>$50,000</h3>
+              <p>+12.5%</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="charts-section">
+          <!-- First Chart -->
+          <div class="chart-card">
+            <div class="chart-heading">
+              <h3>Income vs Expenses</h3>
+
+              <div class="chart-legend">
+                <span>🟣 Income</span>
+                <span>🩷 Expenses</span>
+              </div>
+            </div>
+
+            <div class="chart-content">
+              <canvas id="incomeExpenseChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Second Chart -->
+          <div class="chart-card">
+            <div class="chart-heading">
+              <h3>Expense by Category</h3>
+            </div>
+
+            <div class="chart-content">
+              <canvas id="expenseCategoryChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+
+        <div class="bottom-header">
+          <div class="recent-transaction">
+              A
+          </div>
+
+          <div class="monthly-budget">
+              A
+          </div>
+        </div>
+
+
+      </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

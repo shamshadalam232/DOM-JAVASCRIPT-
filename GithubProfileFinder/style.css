@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  transition: all 0.3s linear;
+}
+
+body{
+    background-color: rgb(3, 0, 17);
+    color: white;
+}
+
+.main {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input{
+    background-color: rgb(21, 21, 40);
+    width: 400px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.searchBtn{
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(218, 12, 200);
+    cursor: pointer;
+}
+
+.searchBtn:hover{
+    background-color: rgb(119, 79, 116);
+}
+
+.finder{
+    color: blue;
+}
+
+.search-github{
+    margin-top: 5px;
+}
+
+
+
+.profile-card {
+    width: 650px;
+    padding: 30px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #30363d;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name-bio {
+    margin-bottom: 25px;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.userid {
+    color: #4493f8;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #adbac7;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.location-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: #adbac7;
+}
+
+.location-link button {
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.location-link button:hover {
+    background: #2ea043;
+}
+
+.folllowers-follow {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.folllowers-follow div {
+    text-align: center;
+    flex: 1;
+}
+
+.folllowers-follow p:first-child {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.folllowers-follow p:last-child {
+    font-size: 12px;
+    color: #8b949e;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px 18px;
+    }
+
+    .location-link {
+        justify-content: center;
+    }
+
+    .folllowers-follow {
+        gap: 5px;
+        padding: 15px 8px;
+    }
+
+    .folllowers-follow p:first-child {
+        font-size: 18px;
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+:root {
+    --bg: #080b16;
+    --card: #111827;
+    --border: #263247;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --purple: #8b5cf6;
+    --blue: #3b82f6;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 10%, #25164b 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, #102b52 0%, transparent 35%),
+        var(--bg);
+    color: var(--text);
+    padding: 40px 20px;
+}
+
+/* Header */
+
+.main {
+    text-align: center;
+    margin: 20px auto 35px;
+}
+
+.main h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.main h2 i {
+    color: white;
+    margin-right: 8px;
+}
+
+.finder {
+    background: linear-gradient(90deg, #a78bfa, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.search-github {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Search */
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    height: 52px;
+    padding: 0 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #111827;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input::placeholder {
+    color: #64748b;
+}
+
+.input:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.searchBtn {
+    height: 52px;
+    padding: 0 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Profile Card */
+
+.profile-card {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background: rgba(17, 24, 39, 0.85);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    border-color: #55418c;
+    transform: translateY(-4px);
+}
+
+.img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 3px solid #8b5cf6;
+    padding: 3px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Name & Bio */
+
+.profile-name-bio {
+    margin-bottom: 25px;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.userid {
+    color: #60a5fa;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.bio {
+    color: #a5b4c8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Location & Links */
+
+.location-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.location-link button {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.location-link button:hover {
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Followers Statistics */
+
+.folllowers-follow {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    background: #0b1220;
+    border: 1px solid var(--border);
+    padding: 20px 15px;
+    border-radius: 14px;
+}
+
+.folllowers-follow div {
+    flex: 1;
+    text-align: center;
+}
+
+.folllowers-follow p:first-child {
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.folllowers-follow p:last-child {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* Statistics & Repository Containers */
+
+.statistics,
+.repositories {
+    max-width: 750px;
+    width: 100%;
+    margin: 25px auto;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .main h2 {
+        font-size: 27px;
+    }
+
+    .search {
+        gap: 8px;
+    }
+
+    .input {
+        height: 48px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .searchBtn {
+        height: 48px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px 18px;
+        gap: 18px;
+    }
+
+    .img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .location-link {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .folllowers-follow {
+        gap: 5px;
+        padding: 15px 8px;
+    }
+
+    .folllowers-follow p:first-child {
+        font-size: 19px;
+    }
+
+    .folllowers-follow p:last-child {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .main h2 {
+        font-size: 23px;
+    }
+
+    .searchBtn {
+        padding: 0 10px;
+    }
+}
