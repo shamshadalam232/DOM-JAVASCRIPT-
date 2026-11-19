@@ -66,7 +66,7 @@
             </div>
             <i class="fa-solid fa-bell"></i>
             <div class="add-transaction">
-              <button>+ Add Transaction</button>
+              <button id="openModal">+ Add Transaction</button>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
             </div>
             <div>
               <p class="ba">Total Balance</p>
-              <h3>$50,000</h3>
+              <h3 id="balance">$50,000</h3>
               <p>+12.5%</p>
             </div>
           </div>
@@ -89,7 +89,7 @@
             </div>
             <div>
               <p class="ba">Total Income</p>
-              <h3>$50,000</h3>
+              <h3 id="income">$50,000</h3>
               <p>+12.5%</p>
             </div>
           </div>
@@ -100,7 +100,7 @@
             </div>
             <div>
               <p class="ba">Total Expense</p>
-              <h3>$50,000</h3>
+              <h3 id="expense">$50,000</h3>
               <p>+12.5%</p>
             </div>
           </div>
@@ -111,7 +111,7 @@
             </div>
             <div>
               <p class="ba">Monthly Savings</p>
-              <h3>$50,000</h3>
+              <h3 class="month">$50,000</h3>
               <p>+12.5%</p>
             </div>
           </div>
@@ -146,21 +146,150 @@
           </div>
         </section>
 
-
         <div class="bottom-header">
+          <!-- Recent Transactions -->
           <div class="recent-transaction">
-              A
+            <div class="re">
+              <div>
+                <h3>Recent Transactions</h3>
+                <p>Manage your recent income and expenses</p>
+              </div>
+
+              <button class="view-all">
+                View All <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>Monthly Salary</td>
+                    <td><span class="income">Income</span></td>
+                    <td>01 Nov 2026</td>
+                    <td class="positive">+₹30,000</td>
+                    <td class="actions">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>02</td>
+                    <td>Shopping</td>
+                    <td><span class="expense">Shopping</span></td>
+                    <td>05 Nov 2026</td>
+                    <td class="negative">-₹2,000</td>
+                    <td class="actions">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-trash"></i>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
           </div>
 
+          <!-- Monthly Budget -->
           <div class="monthly-budget">
-              A
+            <div class="budget-heading">
+              <h3>Monthly Budget</h3>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <p class="budget-subtitle">Your monthly spending limit</p>
+
+            <div class="budget-amount">
+              <h2 class="total">₹50,000</h2>
+              <span>Monthly Limit</span>
+            </div>
+
+            <div class="budget-details">
+              <div>
+                <span>Spent</span>
+                <h3 class="spent">₹30,000</h3>
+              </div>
+
+              <div>
+                <span>Remaining</span>
+                <h3 class="remaining">₹20,000</h3>
+              </div>
+            </div>
+
+            <div class="budget-progress">
+              <div class="progress-fill"></div>
+            </div>
+
+            <p class="budget-note">
+              <i class="fa-solid fa-circle-check"></i>
+              You have used 60% of your budget.
+            </p>
+
+            <button class="budget-btn">
+              <i class="fa-solid fa-pen"></i> Update Budget
+            </button>
+          </div>
+        </div>
+
+        <!-- ! modal ka kaam -->
+
+        <div class="modal" id="transactionModal">
+          <div class="modal-content">
+            <h2>Add New Transaction</h2>
+            <button type="button" id="closeModal">✕</button>
+            <form id="transactionForm">
+                 <input type="text" class="transaction-name" 
+                 id="transaction-name"
+                 placeholder="Enter transaction name...">
+            <input type="number" id="amount" min="1" required placeholder="Enter amount...">
+            <select class="type" id="type" required>
+              <option value="">Type</option>
+              <option value="Income">Income</option>
+              <option value="Expense">Expense</option>
+            </select>
+            <select class="category" id="category" required>
+              <option value="">Category</option>
+              <option value="Income">Income</option>
+              <option value="Food">Food</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Bills">Bills</option>
+              <option value="Other">Other</option>
+            </select>
+            <input type="date" id="date" required>
+            <button type="submit">Save Transaction</button>
+            </form>
           </div>
         </div>
 
 
+        <div class="Budget-modal">
+          <div class="modal-box">
+            <h1>Update Monthly Budget</h1>
+            <input type="number" min="1" class="budget-input"   placeholder="Enter Monthly budget...">
+
+            <div class="button-cancel">
+               <button class="savebutton">Save</button>
+            <button class="cancelbutton">Cancel</button>
+            </div>
+            
+          </div>
+        </div>
       </main>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/dashboard.js"></script>
   </body>
